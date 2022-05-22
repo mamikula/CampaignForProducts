@@ -1,0 +1,28 @@
+<h2>Product list</h2>
+<a id="newCamp" class="button-7" routerLink="/newProduct">Add new product</a>
+<table>
+    <thead>
+        <tr>
+            <td class="headers">ID</td>
+            <td class="headers">Name</td>
+            <td class="headers">Price</td>
+            <td class="headers">Campaign</td>
+            <td class="headers" colspan = "2">Buttons</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productID}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productPrice}}</td>
+            <td>{{getCampaignName(product)}}</td>
+
+            <td>
+                <a id = "aID" class="button-7" routerLink="/editProduct/{{product.productID}}" [state] = "product" routerLinkActive="active">Edit</a>
+            </td>
+            <td>
+                <button class="button-7" type="submit" (click)="deleteProduct(product.productID)" (click)="reloadCurrentPage()">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

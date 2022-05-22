@@ -1,0 +1,47 @@
+<h2>Add new campaign</h2>
+<div id ="container">
+    <form (ngSubmit)="onSubmit()">
+
+        <tr>
+            <td  class = "string">campaign name</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignName" [(ngModel)] = "campaign.campaignName" name = campaignName></td>
+        </tr>
+
+        <tr>
+            <td  class = "string">Keywords</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignKeyWords" [(ngModel)] = "campaign.keyWords" name = campaignKeyWords></td>
+        </tr>
+
+        <tr>
+            <td  class = "string">Min amount</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignMinAmount" [(ngModel)] = "campaign.minAmount" name = campaignMinAmount></td>
+        </tr>
+
+        <tr>
+            <td class = "string">Fund</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignFund" [(ngModel)] = "campaign.campaignFund" name = campaignFund></td>
+        </tr>
+
+        <tr>
+            <td class = "string">Status</td>
+            <td><select class = "inputClass" class="input" id="campaignStatus" [(ngModel)]="campaign.status" name=campaignStatus>
+                <option value="true">On</option>
+                <option value="false">Off</option>
+            </select></td>
+        </tr>
+
+        <tr>
+            <td class = "string">campaign town</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignTownName" [(ngModel)] = "campaign.townName" name = campaignTownName></td>
+        </tr>
+
+        <tr>
+            <td class = "string">campaign radius</td>
+            <td><input class = "inputClass" type="text" class = "inputClass" id="campaignRadius" [(ngModel)] = "campaign.radius" name = campaignRadius></td>
+        </tr>
+
+        <td colspan="2"><button class="button-7" type="submit">Submit</button></td>
+
+
+    </form>
+</div>

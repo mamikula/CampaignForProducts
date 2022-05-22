@@ -1,0 +1,36 @@
+<h2>Campaing list</h2>
+<a id="newCamp" class = "button-7" routerLink='/newCampaign'>Add new campaign</a>
+<table>
+    <thead>
+        <tr>
+            <td class="headers">ID</td>
+            <td class="headers">Name</td>
+            <td class="headers">Keywords</td>
+            <td class="headers">Min Amount</td>
+            <td class="headers">Fund</td>
+            <td class="headers">Status</td>
+            <td class="headers">Town</td>
+            <td class="headers">Radius</td>
+            <td class="headers" colspan = "2">Buttons</td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of campaigns">
+            <td>{{c.campaignID}}</td>
+            <td>{{c.campaignName}}</td>
+            <td>{{c.keyWords}}</td>
+            <td>{{c.minAmount}}</td>
+            <td>{{c.campaignFund}}</td>
+            <td>{{c.status}}</td>
+            <td>{{c.townName}}</td>
+            <td>{{c.radius}}</td>
+            <td>
+                <a id = "aID" class = "button-7" routerLink='/editCampaign/{{c.campaignID}}' [state]="c">Edit</a>
+            </td>
+            <td>
+                <button class="button-7" type="submit" (click)="deleteCampaign(c.campaignID)" (click)="reloadCurrentPage()">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

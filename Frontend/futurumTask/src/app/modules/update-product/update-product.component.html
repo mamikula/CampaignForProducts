@@ -1,0 +1,18 @@
+<h2>Update product</h2>
+<div id = "container">
+
+    <form (ngSubmit)="updateProduct()">
+        <tr >
+            <td class = "string">Product name</td>
+            <td><input class = "inputClass" type="text" class="inputClass" id="productName" [(ngModel)]="product.productName" name="productName"></td>
+        </tr>
+
+        <tr>
+            <td class = "string">Product price</td>
+            <td><input class = "inputClass" type="text" class="inputClass" id="campaignKeyWords" [(ngModel)]="product.productPrice"
+                name=productPrice></td>
+        </tr>
+
+        <td colspan="2"><button class="button-7"  type="submit">Submit</button></td>
+    </form>
+</div>

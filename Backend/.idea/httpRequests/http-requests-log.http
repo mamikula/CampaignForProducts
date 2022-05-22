@@ -1,0 +1,10 @@
+POST http://localhost:8080/product/addProduct
+
+<> 2022-05-21T104527.400.json
+
+###
+
+DELETE http://localhost:8080/product/deleteProduct?id=1
+
+###
+
